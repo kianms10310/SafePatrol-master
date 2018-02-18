@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.hanict.safepatrol.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/reverse_button"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reverse"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="설정"
+            android:textColor="#2e2e2e"
+            android:textSize="20pt" />
+    </LinearLayout>
+    <!-- 배경화면 세로 기준 중앙 정렬 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="10">
+        <!-- 첫번째 줄 버튼 2개 가로 기준 중앙 정렬 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!-- 버튼 속성은 나중에 이미지 넣어서 이미지 버튼 속성으로 변경 -->
+            <ImageButton
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:id="@+id/commuting_button"
+                android:background="@drawable/setting2"/>
+            <TextView
+                android:layout_width="80px"
+                android:layout_height="80px" />
+            <ImageButton
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:id="@+id/alarm_button"
+                android:background="@drawable/setting3"/>
+            <!--이 TextView는 띄워주는 역할 -->
+
+        </LinearLayout>
+        <!--이 TextView는 띄워주는 역할 -->
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="80px" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <!-- 버튼 속성은 나중에 이미지 넣어서 이미지 버튼 속성으로 변경 -->
+            <ImageButton
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:id="@+id/report_button"
+                android:background="@drawable/setting1"
+                android:visibility="gone"/>
+            <!--이 TextView는 띄워주는 역할 -->
+            <TextView
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:visibility="gone"/>
+            <ImageButton
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:id="@+id/Infomation_button"
+                android:background="@drawable/setting4"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

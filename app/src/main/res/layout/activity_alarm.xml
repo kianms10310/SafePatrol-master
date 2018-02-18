@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/border"
+    tools:context="com.hanict.safepatrol.alarm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="top"
+        android:orientation="vertical">
+        <!-- 제목화면 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/alarm_reverse_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/reverse" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="알림음 설정"
+                android:textColor="#2e2e2e"
+                android:textSize="20pt" />
+        </LinearLayout>
+        <!-- 소리크기 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소리크기"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <SeekBar
+                android:id="@+id/alarm_seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:max="10"
+                android:progress="3" />
+        </LinearLayout>
+        <!--무단횡단 알람 설정 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무단횡단"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <Spinner
+                android:id="@+id/alarm_spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+
+            <ToggleButton
+                android:id="@+id/alarm_switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <!--보행자 알람 설정 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보행자"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <Spinner
+                android:id="@+id/alarm_spinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+
+            <ToggleButton
+                android:id="@+id/alarm_switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <!--스쿨존 알람 설정 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스쿨존"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <Spinner
+                android:id="@+id/alarm_spinner3"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+
+            <ToggleButton
+                android:id="@+id/alarm_switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <!--자전거 알람 설정 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="○"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자전거"
+                android:textColor="#2e2e2e"
+                android:textSize="15pt" />
+
+            <Spinner
+                android:id="@+id/alarm_spinner4"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+
+            <ToggleButton
+                android:id="@+id/alarm_switch4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hanict.safepatrol">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SeonWooHan 파일 권한 설정(08월 31일 추가) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAB_uEA1gY5jRifhh6nCmL3NYayZ0RhoKw" />
+
+        <activity android:name=".PermmisionCheckActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <!-- service 쪽 stopwithTask 추가 -->
+        <service
+            android:name=".LocationalarmService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":locker"
+            android:stopWithTask="false" />
+
+        <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".Report" />
+        <activity android:name=".commuting" />
+        <activity android:name=".alarm" />
+        <!-- SeonWooHan 버튼 이벤트용 Activity 설정(08월 31일 추가) -->
+
+        <activity android:name=".StaticActivity" />
+        <activity android:name=".InformationActivity"/>
+    </application>
+
+</manifest>
